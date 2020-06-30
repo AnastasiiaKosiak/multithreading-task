@@ -16,7 +16,6 @@ public class ThreadB implements Runnable {
         while (counter.getCounter() != LIMIT) {
             counter.increment();
             LOGGER.info(Thread.currentThread().getName() + "=" + counter.getCounter());
-            //System.out.println(Thread.currentThread().getName() + " " + counter.getCounter());
         }
     }
 }

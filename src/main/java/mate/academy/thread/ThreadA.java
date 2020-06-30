@@ -17,7 +17,6 @@ public class ThreadA extends Thread {
         while (counter.getCounter() != LIMIT) {
             counter.increment();
             LOGGER.info(Thread.currentThread().getName() + "=" + counter.getCounter());
-            //System.out.println(Thread.currentThread().getName() + " " + counter.getCounter());
         }
     }
 }

@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
         Counter counter = new Counter(0);
         ThreadA threadA = new ThreadA(counter);
-        Thread threadB = new Thread(new ThreadB(counter));
+        ThreadB runnable = new ThreadB(counter);
+        Thread threadB = new Thread(runnable);
         threadB.start();
         threadA.start();
     }
